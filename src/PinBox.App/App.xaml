@@ -1,0 +1,102 @@
+<Application
+    x:Class="PinBox.App.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <controls:XamlControlsResources />
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush x:Key="PinBoxInkBrush" Color="#2F2925" />
+            <SolidColorBrush x:Key="PinBoxMutedInkBrush" Color="#6F6259" />
+            <SolidColorBrush x:Key="PinBoxWarmBackgroundBrush" Color="#F7F0E7" />
+            <SolidColorBrush x:Key="PinBoxSurfaceBrush" Color="#FFFDF8" />
+            <SolidColorBrush x:Key="PinBoxSurfaceStrongBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="PinBoxBorderBrush" Color="#E7D8C8" />
+            <SolidColorBrush x:Key="PinBoxAccentBrush" Color="#9B6A46" />
+            <SolidColorBrush x:Key="PinBoxAccentHoverBrush" Color="#865939" />
+
+            <SolidColorBrush x:Key="PinBoxPeachBrush" Color="#F6D9CA" />
+            <SolidColorBrush x:Key="PinBoxSageBrush" Color="#DDE8D2" />
+            <SolidColorBrush x:Key="PinBoxBlueBrush" Color="#D7E3EF" />
+            <SolidColorBrush x:Key="PinBoxSandBrush" Color="#EFE2BF" />
+            <SolidColorBrush x:Key="PinBoxLavenderBrush" Color="#E6DDF1" />
+
+            <SolidColorBrush x:Key="PinBoxPeachBorderBrush" Color="#E9BBA5" />
+            <SolidColorBrush x:Key="PinBoxSageBorderBrush" Color="#C3D4B5" />
+            <SolidColorBrush x:Key="PinBoxBlueBorderBrush" Color="#B8CEE1" />
+            <SolidColorBrush x:Key="PinBoxSandBorderBrush" Color="#DEC889" />
+            <SolidColorBrush x:Key="PinBoxLavenderBorderBrush" Color="#CEC0E2" />
+
+            <!-- Explicit text-control resources prevent the classic focused-input contrast bug. -->
+            <SolidColorBrush x:Key="TextControlForeground" Color="#2F2925" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#2F2925" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#2F2925" />
+            <SolidColorBrush x:Key="TextControlBackground" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="#E7D8C8" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="#C6AA92" />
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="#9B6A46" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#81746A" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#81746A" />
+            <SolidColorBrush x:Key="TextControlHeaderForeground" Color="#6F6259" />
+
+            <SolidColorBrush x:Key="ButtonForeground" Color="#2F2925" />
+            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="#2F2925" />
+            <SolidColorBrush x:Key="ButtonBackground" Color="#FFF9F0" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F6E7D4" />
+            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#E7D8C8" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#D0B69B" />
+
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource PinBoxInkBrush}" />
+            </Style>
+
+            <Style TargetType="TextBox">
+                <Setter Property="Foreground" Value="{StaticResource PinBoxInkBrush}" />
+                <Setter Property="Background" Value="{StaticResource PinBoxSurfaceStrongBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PinBoxBorderBrush}" />
+                <Setter Property="BorderThickness" Value="1.25" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="12,8" />
+                <Setter Property="SelectionHighlightColor" Value="#D9B38F" />
+            </Style>
+
+            <Style TargetType="ComboBox">
+                <Setter Property="Foreground" Value="{StaticResource PinBoxInkBrush}" />
+                <Setter Property="Background" Value="{StaticResource PinBoxSurfaceStrongBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PinBoxBorderBrush}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10,6" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="Foreground" Value="{StaticResource PinBoxInkBrush}" />
+                <Setter Property="Background" Value="#FFF9F0" />
+                <Setter Property="BorderBrush" Value="{StaticResource PinBoxBorderBrush}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="12,7" />
+            </Style>
+
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Background" Value="{StaticResource PinBoxAccentBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PinBoxAccentBrush}" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="14,9" />
+            </Style>
+
+            <Style x:Key="TinyButtonStyle" TargetType="Button">
+                <Setter Property="MinWidth" Value="32" />
+                <Setter Property="MinHeight" Value="30" />
+                <Setter Property="Padding" Value="8,4" />
+                <Setter Property="CornerRadius" Value="9" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
