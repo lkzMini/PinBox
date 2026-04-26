@@ -9,7 +9,9 @@
     <Grid
         x:Name="Shell"
         Background="{StaticResource PinBoxWarmBackgroundBrush}"
-        Loaded="Shell_Loaded">
+        Loaded="Shell_Loaded"
+        MinHeight="720"
+        MinWidth="1080">
         <Grid.Resources>
             <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
             <converters:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
